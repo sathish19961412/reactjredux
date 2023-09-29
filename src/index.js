@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
-
+import useReducers from './features/user';
 const store=configureStore({
-  reducer:{}
+  reducer:{
+    user:useReducers
+  }
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
