@@ -4,9 +4,12 @@ import App from './App';
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
 import useReducers from './features/user';
+import themeReducers from './features/theme';
+
 const store=configureStore({
   reducer:{
-    user:useReducers
+    user:useReducers,
+    theme:themeReducers
   }
 })
 
